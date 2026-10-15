@@ -1,0 +1,3 @@
+-- Barbie Dreamhouse Database
+-- Fernanda Magaña Zapata A01663341
+-- Vanessa Jacqueline Troncoso Ortega A01663244
