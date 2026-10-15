@@ -3,9 +3,7 @@
 -- Vanessa Jacqueline Troncoso Ortega A01663244
 
 -- REMEMBER: If you have already run it "IF NOT EXISTS"
-DROP DATABASE IF EXISTS barbie_dreamhouse;
 CREATE DATABASE IF NOT EXISTS barbie_dreamhouse;
-
 USE barbie_dreamhouse;
 
 -- Creating tables
