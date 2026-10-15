@@ -6,6 +6,8 @@ CREATE DATABASE barbie_dreamhouse;
 
 USE barbie_dreamhouse;
 
+-- Creating tables
+
 CREATE TABLE dreamhouse_rooms(
     room_id INT AUTO_INCREMENT PRIMARY KEY,
     room_name VARCHAR(50) NOT NULL UNIQUE,
@@ -53,6 +55,8 @@ CREATE TABLE users(
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50)
 );
+
+-- Assigning Foreign Keys
 
 ALTER TABLE dreamhouse_devices
 ADD CONSTRAINT fk_room
