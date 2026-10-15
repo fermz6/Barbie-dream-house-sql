@@ -2,7 +2,7 @@
 -- Fernanda Magaña Zapata A01663341
 -- Vanessa Jacqueline Troncoso Ortega A01663244
 
--- If you have already run it "IF NOT EXISTS"
+-- REMEMBER: If you have already run it "IF NOT EXISTS"
 CREATE DATABASE IF NOT EXISTS barbie_dreamhouse;
 
 USE barbie_dreamhouse;
