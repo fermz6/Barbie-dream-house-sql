@@ -75,14 +75,14 @@ FOREIGN KEY (device_id) REFERENCES dreamhouse_devices(device_id);
 
 ALTER TABLE sensor_readings
 ADD CONSTRAINT fk_sensor
-FOREIGN KEY (sensor_id) REFERENCES dreamhouse_devices(sensor_id);
+FOREIGN KEY (sensor_id) REFERENCES sensors(sensor_id);
 
 ALTER TABLE commands
 ADD CONSTRAINT fk_user
-FOREIGN KEY (user_id) REFERENCES dreamhouse_devices(user_id);
+FOREIGN KEY (user_id) REFERENCES users(user_id);
 
 ALTER TABLE commands
 ADD CONSTRAINT fk_actuator
-FOREIGN KEY (actuator_id) REFERENCES dreamhouse_devices(actuator_id);
+FOREIGN KEY (actuator_id) REFERENCES actuators(actuator_id);
 
 
