@@ -3,6 +3,7 @@
 -- Vanessa Jacqueline Troncoso Ortega A01663244
 
 -- REMEMBER: If you have already run it "IF NOT EXISTS"
+DROP DATABASE IF EXISTS barbie_dreamhouse;
 CREATE DATABASE IF NOT EXISTS barbie_dreamhouse;
 
 USE barbie_dreamhouse;
@@ -46,17 +47,17 @@ CREATE TABLE sensor_readings(
     time_reading DATETIME NOT NULL
 );
 
+CREATE TABLE users(
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL
+);
+
 CREATE TABLE commands(
     command_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
+    user_id INT NOT NULL,
     actuator_id INT NOT NULL,
     value_command VARCHAR(50) NOT NULL,
     time_command DATETIME NOT NULL
-);
-
-CREATE TABLE users(
-    user_id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50)
 );
 
 -- Assigning Foreign Keys
@@ -84,5 +85,3 @@ FOREIGN KEY (user_id) REFERENCES users(user_id);
 ALTER TABLE commands
 ADD CONSTRAINT fk_actuator
 FOREIGN KEY (actuator_id) REFERENCES actuators(actuator_id);
-
-
