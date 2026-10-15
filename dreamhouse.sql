@@ -2,7 +2,8 @@
 -- Fernanda Magaña Zapata A01663341
 -- Vanessa Jacqueline Troncoso Ortega A01663244
 
-CREATE DATABASE barbie_dreamhouse;
+-- If you have already run it "IF NOT EXISTS"
+CREATE DATABASE IF NOT EXISTS barbie_dreamhouse;
 
 USE barbie_dreamhouse;
 
@@ -10,45 +11,47 @@ USE barbie_dreamhouse;
 
 CREATE TABLE dreamhouse_rooms(
     room_id INT AUTO_INCREMENT PRIMARY KEY,
-    room_name VARCHAR(50) NOT NULL UNIQUE,
+    room_name VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE dreamhouse_devices(
-    device_id INT AUTO_INCREMENT NOT NULL,
-    room_id INT AUTO_INCREMENT,
-    device_name VARCHAR(50),
-    device_type VARCHAR(50)
+    device_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_id INT NOT NULL,
+    device_name VARCHAR(50) NOT NULL,
+    device_type VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE sensors(
     sensor_id INT AUTO_INCREMENT PRIMARY KEY,
-    device_id  INT AUTO_INCREMENT NOT NULL,
+    device_id  INT NOT NULL UNIQUE,
     sensor_name VARCHAR(50) NOT NULL,
+    sensor_type VARCHAR(50) NOT NULL,
     current_value DECIMAL(10,2),
     updated DATETIME
 );
 
 CREATE TABLE actuators(
     actuator_id INT AUTO_INCREMENT PRIMARY KEY,
-    device_id INT AUTO_INCREMENT NOT NULL,
+    device_id INT NOT NULL UNIQUE,
     actuator_name VARCHAR(50) NOT NULL,
-    current_state DECIMAL(10,2),
+    actuator_type VARCHAR(50) NOT NULL,
+    current_state VARCHAR(50),
     updated DATETIME
 );
 
 CREATE TABLE sensor_readings(
     reading_id INT AUTO_INCREMENT PRIMARY KEY,
-    sensor_id INT AUTO_INCREMENT NOT NULL,
-    current_value DECIMAL(10,2),
-    time_reading DATETIME, 
+    sensor_id INT NOT NULL,
+    current_value DECIMAL(10,2) NOT NULL,
+    time_reading DATETIME NOT NULL
 );
 
 CREATE TABLE commands(
     command_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT AUTO_INCREMENT,
-    actuator_id INT AUTO_INCREMENT NOT NULL,
-    value VARCHAR(50) NOT NULL,
-    time_command DATETIME
+    user_id INT,
+    actuator_id INT NOT NULL,
+    value_command VARCHAR(50) NOT NULL,
+    time_command DATETIME NOT NULL
 );
 
 CREATE TABLE users(
@@ -63,7 +66,7 @@ ADD CONSTRAINT fk_room
 FOREIGN KEY (room_id) REFERENCES dreamhouse_rooms(room_id);
 
 ALTER TABLE sensors
-ADD CONSTRAINT fk_device
+ADD CONSTRAINT fk_dev
 FOREIGN KEY (device_id) REFERENCES dreamhouse_devices(device_id);
 
 ALTER TABLE actuators
