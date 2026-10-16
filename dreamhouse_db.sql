@@ -76,3 +76,18 @@ FOREIGN KEY (user_id) REFERENCES users(user_id);
 ALTER TABLE commands
 ADD CONSTRAINT fk_command_actuator
 FOREIGN KEY (device_id) REFERENCES actuators(device_id);
+
+-- Inserting elements
+INSERT INTO dreamhouse_rooms (room_id, room_name)
+VALUES
+    (1, 'Bedroom'),
+    (2, 'Kitchen'),
+    (3, 'Bathroom'),
+    (4, 'Living Room'),
+    (5, 'Garage'),
+    (6, 'Garden');
+
+INSERT INTO dreamhouse_devices
+
+
+
