@@ -87,7 +87,11 @@ VALUES
     (5, 'Garage'),
     (6, 'Garden');
 
-INSERT INTO dreamhouse_devices
+INSERT INTO users (user_id, username)
+VALUES
+    (1, 'Fernanda')
+    (2, 'Vanessa')
+    (3, 'Barbie');
 
 
 
