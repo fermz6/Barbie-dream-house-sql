@@ -121,7 +121,7 @@ VALUES
     (5, 'Garage Servo Motor', 'Actuator'),
     (6, 'Rain Sensor', 'Sensor'),
     (6, 'Garden Servo Motor', 'Actuator'),
-    (7, 'RFID Reader', 'Input'),
+    (7, 'RFID Reader', 'Sensor'),
     (7, 'Elevator Motor', 'Actuator'),
     (7, 'Oled display Welcome', 'Actuator'),
     (7, 'Push Button', 'Sensor'),
