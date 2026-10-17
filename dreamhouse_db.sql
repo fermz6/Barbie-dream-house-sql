@@ -4,7 +4,6 @@
 
 --CREATE DATABASE dreamhouse_db;
 CREATE DATABASE IF NOT EXISTS dreamhouse_db;
-
 USE dreamhouse_db;
 
 CREATE TABLE dreamhouse_rooms (
