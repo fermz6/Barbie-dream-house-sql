@@ -43,6 +43,17 @@ CREATE TABLE users (
     username VARCHAR(50) NOT NULL
 );
 
+CREATE TABLE rfid_cards (
+    card_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    rfid_uid VARCHAR(50) NOT NULL UNIQUE,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+
+    CONSTRAINT fk_rfid_user
+        FOREIGN KEY (user_id)
+        REFERENCES users(user_id)
+);
+
 CREATE TABLE commands (
     command_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
@@ -115,6 +126,6 @@ VALUES
     (6, 'Elevator Motor', 'Actuator'),
     (6, 'Oled display Welcome', 'Actuator')
     (7, 'Push Button', 'Sensor'),
-    (7, 'Buzzer', 'Sensor');
+    (7, 'Buzzer', 'Actuator');
 
 
