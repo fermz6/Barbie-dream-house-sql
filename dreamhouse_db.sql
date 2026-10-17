@@ -101,8 +101,8 @@ VALUES
 
 INSERT INTO users (username)
 VALUES
-    ('Fernanda')
-    ('Vanessa')
+    ('Fernanda'),
+    ('Vanessa'),
     ('Barbie');
 
 INSERT INTO dreamhouse_devices (room_id, device_name, device_type)
