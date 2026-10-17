@@ -106,6 +106,8 @@ VALUES
     (4, 'Living Room LED temperature', 'Actuator'),
     (5, 'VL5L0X Distance', 'Sensor'),
     (5, 'Garage Servo Motor', 'Actuator'),
+    (6, 'Rain Sensor', 'Sensor'),
+    (6, 'Garden Servo Motor', 'Actuator'),
     (6, 'RFID Reader', 'Sensor'),
     (6, 'Elevator Motor', 'Actuator'),
     (6, 'Oled display Welcome', 'Actuator')
