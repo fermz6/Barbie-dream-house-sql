@@ -3,7 +3,7 @@
 -- Vanessa Jacqueline Troncoso Ortega A01663244
 
 --CREATE DATABASE dreamhouse_db;
-CREATE DATABASE IF NOT EXISTS dreamhouse_db;
+CREATE DATABASE IF NOT EXISTS dreamhouseDB;
 
 USE dreamhouse_db;
 
