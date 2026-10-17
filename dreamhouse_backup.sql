@@ -106,7 +106,7 @@ CREATE TABLE `dreamhouse_devices` (
 
 LOCK TABLES `dreamhouse_devices` WRITE;
 /*!40000 ALTER TABLE `dreamhouse_devices` DISABLE KEYS */;
-INSERT INTO `dreamhouse_devices` VALUES (1,1,'Bedroom LDR','Sensor'),(2,1,'Bedroom LED','Actuator'),(3,2,'Kitchen Stove Button','Sensor'),(4,2,'Kitchen LED Stove','Actuator'),(5,2,'Kitchen Oven Push Button','Sensor'),(6,2,'Kitchen Oven LED','Actuator'),(7,2,'Kitchen Oven Buzzer','Actuator'),(8,3,'Bathroom LDR','Sensor'),(9,3,'Bathroom LED','Actuator'),(10,4,'Living Room BME280','Sensor'),(11,4,'Living Room LED temperature','Actuator'),(12,5,'VL5L0X Distance','Sensor'),(13,5,'Garage Servo Motor','Actuator'),(14,6,'Rain Sensor','Sensor'),(15,6,'Garden Servo Motor','Actuator'),(16,7,'RFID Reader','Input'),(17,7,'Elevator Motor','Actuator'),(18,7,'Oled display Welcome','Actuator'),(19,7,'Push Button','Sensor'),(20,7,'Buzzer','Actuator');
+INSERT INTO `dreamhouse_devices` VALUES (1,1,'Bedroom LDR','Sensor'),(2,1,'Bedroom LED','Actuator'),(3,2,'Kitchen Stove Button','Sensor'),(4,2,'Kitchen LED Stove','Actuator'),(5,2,'Kitchen Oven Push Button','Sensor'),(6,2,'Kitchen Oven LED','Actuator'),(7,2,'Kitchen Oven Buzzer','Actuator'),(8,3,'Bathroom LDR','Sensor'),(9,3,'Bathroom LED','Actuator'),(10,4,'Living Room BME280','Sensor'),(11,4,'Living Room LED temperature','Actuator'),(12,5,'VL5L0X Distance','Sensor'),(13,5,'Garage Servo Motor','Actuator'),(14,6,'Rain Sensor','Sensor'),(15,6,'Garden Servo Motor','Actuator'),(16,7,'RFID Reader','Sensor'),(17,7,'Elevator Motor','Actuator'),(18,7,'Oled display Welcome','Actuator'),(19,7,'Push Button','Sensor'),(20,7,'Buzzer','Actuator');
 /*!40000 ALTER TABLE `dreamhouse_devices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -250,4 +250,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-16 22:06:49
+-- Dump completed on 2026-10-16 23:04:38
