@@ -78,20 +78,38 @@ ADD CONSTRAINT fk_command_actuator
 FOREIGN KEY (device_id) REFERENCES actuators(device_id);
 
 -- Inserting elements
-INSERT INTO dreamhouse_rooms (room_id, room_name)
+INSERT INTO dreamhouse_rooms (room_name)
 VALUES
-    (1, 'Bedroom'),
-    (2, 'Kitchen'),
-    (3, 'Bathroom'),
-    (4, 'Living Room'),
-    (5, 'Garage'),
-    (6, 'Garden');
+    ('Bedroom'),
+    ('Kitchen'),
+    ('Bathroom'),
+    ('Living Room'),
+    ('Garage'),
+    ('Garden'),
+    ('Entrance');
 
-INSERT INTO users (user_id, username)
+INSERT INTO users (username)
 VALUES
-    (1, 'Fernanda')
-    (2, 'Vanessa')
-    (3, 'Barbie');
+    ('Fernanda')
+    ('Vanessa')
+    ('Barbie');
 
+INSERT INTO dreamhouse_devices (room_id, device_name, device_type)
+VALUES
+    (1, 'Bedroom LDR', 'Sensor'),
+    (1, 'Bedroom LED', 'Actuator'),
+    (2, 'Kitchen Stove Button', 'Sensor'),
+    (2, 'Kitchen LED Stove', 'Actuator'),
+    (3, 'Bathroom LDR', 'Sensor'),
+    (3, 'Bathroom LED', 'Actuator'),
+    (4, 'Living Room BME280', 'Sensor'),
+    (4, 'Living Room LED temperature', 'Actuator'),
+    (5, 'VL5L0X Distance', 'Sensor'),
+    (5, 'Garage Servo Motor', 'Actuator'),
+    (6, 'RFID Reader', 'Sensor'),
+    (6, 'Elevator Motor', 'Actuator'),
+    (6, 'Oled display Welcome', 'Actuator')
+    (7, 'Push Button', 'Sensor'),
+    (7, 'Buzzer', 'Sensor');
 
 
