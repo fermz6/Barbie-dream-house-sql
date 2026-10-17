@@ -153,3 +153,16 @@ VALUES
     (18),  -- Oled display Welcome
     (20);  -- Buzzer
 
+INSERT INTO sensor_readings (device_id, measurement_type, reading_value, unit)
+VALUES
+    (1, 'Light', 100.00, 'lux');
+
+INSERT INTO commnads (user_id, device_id, value_command, command_source, command_status)
+VALUES
+    (1, 2, 'ON', 'AUTOMATIC', 'PENDING');
+
+INSERT INTO rfid_cards (user_id, rfid_uid, is_active)
+VALUES
+    (1, 'A01663341', TRUE),
+    (2, 'A01663244', TRUE),
+    (3, 'BARBIE123', FALSE);
