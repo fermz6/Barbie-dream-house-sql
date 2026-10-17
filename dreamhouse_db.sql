@@ -152,3 +152,4 @@ VALUES
     (17),  -- Elevator Motor
     (18),  -- Oled display Welcome
     (20);  -- Buzzer
+
