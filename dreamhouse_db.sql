@@ -122,10 +122,20 @@ VALUES
     (5, 'Garage Servo Motor', 'Actuator'),
     (6, 'Rain Sensor', 'Sensor'),
     (6, 'Garden Servo Motor', 'Actuator'),
-    (6, 'RFID Reader', 'Sensor'),
+    (6, 'RFID Reader', 'Input'),
     (6, 'Elevator Motor', 'Actuator'),
-    (6, 'Oled display Welcome', 'Actuator')
+    (6, 'Oled display Welcome', 'Actuator'),
     (7, 'Push Button', 'Sensor'),
     (7, 'Buzzer', 'Actuator');
 
+INSERT INTO sensors (device_id)
+VALUES
+    (1),   -- Bedroom LDR
+    (3),   -- Kitchen Stove Button
+    (5),   -- Kitchen Oven Push Button
+    (8),   -- Bathroom LDR
+    (10),  -- Living Room BME280
+    (12),  -- VL5L0X Distance
+    (14),  -- Rain Sensor
+    (19);  -- Push Button
 
