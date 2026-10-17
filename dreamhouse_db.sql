@@ -122,9 +122,9 @@ VALUES
     (5, 'Garage Servo Motor', 'Actuator'),
     (6, 'Rain Sensor', 'Sensor'),
     (6, 'Garden Servo Motor', 'Actuator'),
-    (6, 'RFID Reader', 'Input'),
-    (6, 'Elevator Motor', 'Actuator'),
-    (6, 'Oled display Welcome', 'Actuator'),
+    (7, 'RFID Reader', 'Input'),
+    (7, 'Elevator Motor', 'Actuator'),
+    (7, 'Oled display Welcome', 'Actuator'),
     (7, 'Push Button', 'Sensor'),
     (7, 'Buzzer', 'Actuator');
 
@@ -137,6 +137,7 @@ VALUES
     (10),  -- Living Room BME280
     (12),  -- VL5L0X Distance
     (14),  -- Rain Sensor
+    (16),  -- RFID Reader
     (19);  -- Push Button
 
 INSERT INTO actuators (device_id)
@@ -155,11 +156,11 @@ VALUES
 
 INSERT INTO sensor_readings (device_id, measurement_type, reading_value, unit)
 VALUES
-    (1, 'Light', 100.00, 'lux');
+    (1, 'Light', 100.00, 'raw');
 
-INSERT INTO commnads (user_id, device_id, value_command, command_source, command_status)
+INSERT INTO commands (user_id, device_id, value_command, command_source, command_status)
 VALUES
-    (1, 2, 'ON', 'AUTOMATIC', 'PENDING');
+    (NULL, 2, 'ON', 'AUTOMATIC', 'COMPLETED');
 
 INSERT INTO rfid_cards (user_id, rfid_uid, is_active)
 VALUES
