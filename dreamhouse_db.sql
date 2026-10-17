@@ -139,3 +139,16 @@ VALUES
     (14),  -- Rain Sensor
     (19);  -- Push Button
 
+INSERT INTO actuators (device_id)
+VALUES
+    (2),   -- Bedroom LED
+    (4),   -- Kitchen LED Stove
+    (6),   -- Kitchen Oven LED
+    (7),   -- Kitchen Oven Buzzer
+    (9),   -- Bathroom LED
+    (11),  -- Living Room LED temperature
+    (13),  -- Garage Servo Motor
+    (15),  -- Garden Servo Motor
+    (17),  -- Elevator Motor
+    (18),  -- Oled display Welcome
+    (20);  -- Buzzer
